@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:f="http://xmlns.jcp.org/jsf/core">
+<h:head>
+	<meta charset="utf-8" content="" />
+	
+</h:head>
+<h:body>
+
+	<script>
+		function hiddenF() {
+			alert(document.getElementById('myform:hiddenId').value);
+		}
+	</script>
+
+	<h:form id="myform">
+		<h:inputHidden value="#{userBean.strHiddenValue}" id="hiddenId" />
+		<h:commandButton type="button" value="ClickMe" onclick="hiddenF()" />
+	</h:form>
+</h:body>
+</html>
